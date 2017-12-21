@@ -1,8 +1,6 @@
 var React = require("react");
 var Navbar = require("./Navbar");
 var Footer = require("./Footer");
-var Subnavbar = require("./Subnavbar");
-var Sidebar = require("./Sidebar");
 var PDFViewer = require("./PDFViewer");
 
 import { Button } from 'react-bootstrap';
