@@ -1,4 +1,5 @@
 var React = require("react");
+var Link = require('react-router-dom').Link;
 import { Button } from "react-bootstrap";
 
 class Services extends React.Component {
@@ -34,12 +35,14 @@ class Services extends React.Component {
                   Scénariste en herbe ou averti, Scénario finalisé ou simple
                   synopsis, <br/> venez-vous confronter à notre communauté
                 </p>
+                <Link to="/dashboard">
                 <Button
                   className="btn btn-primary btn-lg btn-block"
                   href="Dashboard.html"
                 >
                   Publiez!
                 </Button>
+                </Link>
               </div>
 
               <div className="col-md-6" style={ParaphStyle}>

@@ -16,7 +16,7 @@ class Dashboard_content extends React.Component {
     return (
 <div>
   <div className="content-wrapper">
-    <div className="container-fluid">
+    <div style={{ marginTop: '40px'}} className="container-fluid">
       <Breadcrumbs/>
       <Ironcards/>
       <Chartexample/>

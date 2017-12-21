@@ -1,5 +1,6 @@
 var React = require("react");
 var Dashboard_border = require("./dashboard_border");
+var Border = require("../mes_scenarios/border");
 var Dashboard_content = require("./dashboard_content");
 
 class Dashboard extends React.Component {
@@ -11,7 +12,7 @@ class Dashboard extends React.Component {
     return (
 <div>
   <div className="fixed-nav sticky-footer bg-dark" id="page-top">
-    <Dashboard_border/>
+    <Border/>
     <Dashboard_content/>
   </div>
 </div>
