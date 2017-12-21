@@ -204,7 +204,7 @@ header.masthead {
   #portfolio .portfolio-item .portfolio-link {
     position: relative;
     display: block;
-    max-width: 400px;
+    max-width: 100%;
     margin: 0 auto;
     cursor: pointer; }
     #portfolio .portfolio-item .portfolio-link .portfolio-hover {
@@ -742,7 +742,7 @@ ul.social-buttons {
           height: 100%;
           margin-left: -250px;
           overflow-y: auto;
-          background: white;
+          background: #232526;
           -webkit-transition: all 0.5s ease;
           -moz-transition: all 0.5s ease;
           -o-transition: all 0.5s ease;
@@ -799,7 +799,7 @@ ul.social-buttons {
 
         .sidebar-nav>.sidebar-brand {
           height: 65px;
-          font-size: 18px;
+          font-size: 24px;
           line-height: 60px;
         }
 
