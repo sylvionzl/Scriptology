@@ -2,6 +2,8 @@ var React = require("react");
 var ReactDOM = require("react-dom");
 
 var Home = require("./Home");
+var Dashboard = require("./dashboard/dashboard");
+var Mes_scenarios = require("./mes_scenarios/mes_scenarios");
 
 class App extends React.Component {
   constructor() {
@@ -10,7 +12,9 @@ class App extends React.Component {
 
   render() {
     return (
-    <Home/>
+<div>
+    <Mes_scenarios/>
+</div>
     )
   }
 }

@@ -65,6 +65,21 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(15);
+} else {
+  module.exports = __webpack_require__(16);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -254,7 +269,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -294,21 +309,6 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(15);
-} else {
-  module.exports = __webpack_require__(16);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 3 */
@@ -429,7 +429,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = emptyObject;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 5 */
@@ -489,7 +489,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 6 */
@@ -506,7 +506,7 @@ module.exports = invariant;
 
 
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -558,7 +558,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = warning;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 7 */
@@ -625,7 +625,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 
 module.exports = checkPropTypes;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 8 */
@@ -682,7 +682,7 @@ module.exports = ExecutionEnvironment;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -745,7 +745,7 @@ var EventListener = {
 };
 
 module.exports = EventListener;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 10 */
@@ -948,10 +948,12 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var React = __webpack_require__(2);
+var React = __webpack_require__(0);
 var ReactDOM = __webpack_require__(18);
 
 var Home = __webpack_require__(27);
+var Dashboard = __webpack_require__(28);
+var Mes_scenarios = __webpack_require__(40);
 
 var App = function (_React$Component) {
   _inherits(App, _React$Component);
@@ -965,7 +967,11 @@ var App = function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return React.createElement(Home, null);
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(Mes_scenarios, null)
+      );
     }
   }]);
 
@@ -987,7 +993,7 @@ ReactDOM.render(React.createElement(App, null), document.getElementById("page"))
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var m=__webpack_require__(3),n=__webpack_require__(4),p=__webpack_require__(1);
+var m=__webpack_require__(3),n=__webpack_require__(4),p=__webpack_require__(2);
 function q(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var r={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function t(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||r}t.prototype.isReactComponent={};t.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?q("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};t.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function u(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||r}function v(){}v.prototype=t.prototype;var w=u.prototype=new v;w.constructor=u;m(w,t.prototype);w.isPureReactComponent=!0;function x(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||r}var y=x.prototype=new v;y.constructor=x;m(y,t.prototype);y.unstable_isAsyncReactComponent=!0;y.render=function(){return this.props.children};
@@ -1027,7 +1033,7 @@ var _assign = __webpack_require__(3);
 var invariant = __webpack_require__(5);
 var emptyObject = __webpack_require__(4);
 var warning = __webpack_require__(6);
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 var checkPropTypes = __webpack_require__(7);
 
 // TODO: this is special because it gets imported during build.
@@ -2352,7 +2358,7 @@ module.exports = react;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 17 */
@@ -2417,7 +2423,7 @@ if (process.env.NODE_ENV === 'production') {
   module.exports = __webpack_require__(22);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 19 */
@@ -2435,7 +2441,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(2),m=__webpack_require__(8),A=__webpack_require__(3),B=__webpack_require__(1),ca=__webpack_require__(9),da=__webpack_require__(10),ea=__webpack_require__(11),ha=__webpack_require__(12),ia=__webpack_require__(13),C=__webpack_require__(4);
+var aa=__webpack_require__(0),m=__webpack_require__(8),A=__webpack_require__(3),B=__webpack_require__(2),ca=__webpack_require__(9),da=__webpack_require__(10),ea=__webpack_require__(11),ha=__webpack_require__(12),ia=__webpack_require__(13),C=__webpack_require__(4);
 function D(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:D("227");
 var la={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function qa(a,b){return(a&b)===b}
 var ra={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ra,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){sa.hasOwnProperty(f)?D("48",f):void 0;var g=f.toLowerCase(),k=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:qa(k,b.MUST_USE_PROPERTY),
@@ -2729,12 +2735,12 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var React = __webpack_require__(2);
+var React = __webpack_require__(0);
 var invariant = __webpack_require__(5);
 var warning = __webpack_require__(6);
 var ExecutionEnvironment = __webpack_require__(8);
 var _assign = __webpack_require__(3);
-var emptyFunction$1 = __webpack_require__(1);
+var emptyFunction$1 = __webpack_require__(2);
 var EventListener = __webpack_require__(9);
 var getActiveElement = __webpack_require__(10);
 var shallowEqual = __webpack_require__(11);
@@ -18115,7 +18121,7 @@ module.exports = reactDom;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 23 */
@@ -18288,7 +18294,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var React = __webpack_require__(2);
+var React = __webpack_require__(0);
 
 var Home = function (_React$Component) {
   _inherits(Home, _React$Component);
@@ -18412,6 +18418,2832 @@ var Home = function (_React$Component) {
 }(React.Component);
 
 module.exports = Home;
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+var Dashboard_border = __webpack_require__(29);
+var Dashboard_content = __webpack_require__(32);
+
+var Dashboard = function (_React$Component) {
+  _inherits(Dashboard, _React$Component);
+
+  function Dashboard() {
+    _classCallCheck(this, Dashboard);
+
+    return _possibleConstructorReturn(this, (Dashboard.__proto__ || Object.getPrototypeOf(Dashboard)).call(this));
+  }
+
+  _createClass(Dashboard, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "div",
+          { className: "fixed-nav sticky-footer bg-dark", id: "page-top" },
+          React.createElement(Dashboard_border, null),
+          React.createElement(Dashboard_content, null)
+        )
+      );
+    }
+  }]);
+
+  return Dashboard;
+}(React.Component);
+
+module.exports = Dashboard;
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+var Dashboard_up = __webpack_require__(30);
+var Dashboard_left = __webpack_require__(31);
+
+var Dashboard_border = function (_React$Component) {
+  _inherits(Dashboard_border, _React$Component);
+
+  function Dashboard_border() {
+    _classCallCheck(this, Dashboard_border);
+
+    return _possibleConstructorReturn(this, (Dashboard_border.__proto__ || Object.getPrototypeOf(Dashboard_border)).call(this));
+  }
+
+  _createClass(Dashboard_border, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "div",
+          { className: "fixed-nav sticky-footer bg-dark", id: "page-top" },
+          React.createElement(
+            "nav",
+            { className: "navbar navbar-expand-lg navbar-dark bg-dark fixed-top", id: "mainNav" },
+            React.createElement(Dashboard_up, null),
+            React.createElement(Dashboard_left, null)
+          )
+        )
+      );
+    }
+  }]);
+
+  return Dashboard_border;
+}(React.Component);
+
+module.exports = Dashboard_border;
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+
+var Dashboard_up = function (_React$Component) {
+  _inherits(Dashboard_up, _React$Component);
+
+  function Dashboard_up() {
+    _classCallCheck(this, Dashboard_up);
+
+    return _possibleConstructorReturn(this, (Dashboard_up.__proto__ || Object.getPrototypeOf(Dashboard_up)).call(this));
+  }
+
+  _createClass(Dashboard_up, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "a",
+          { className: "navbar-brand", href: "index.html" },
+          "Scriptology"
+        ),
+        React.createElement(
+          "button",
+          { className: "navbar-toggler navbar-toggler-right", type: "button", "data-toggle": "collapse", "data-target": "#navbarResponsive", "aria-controls": "navbarResponsive", "aria-expanded": "false", "aria-label": "Toggle navigation" },
+          React.createElement("span", { className: "navbar-toggler-icon" })
+        )
+      );
+    }
+  }]);
+
+  return Dashboard_up;
+}(React.Component);
+
+module.exports = Dashboard_up;
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+
+var Dashboard_left = function (_React$Component) {
+  _inherits(Dashboard_left, _React$Component);
+
+  function Dashboard_left() {
+    _classCallCheck(this, Dashboard_left);
+
+    return _possibleConstructorReturn(this, (Dashboard_left.__proto__ || Object.getPrototypeOf(Dashboard_left)).call(this));
+  }
+
+  _createClass(Dashboard_left, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "div",
+          { className: "collapse navbar-collapse", id: "navbarResponsive" },
+          React.createElement(
+            "ul",
+            { className: "navbar-nav navbar-sidenav", id: "exampleAccordion" },
+            React.createElement(
+              "li",
+              { className: "nav-item", "data-toggle": "tooltip", "data-placement": "right", title: "Dashboard" },
+              React.createElement(
+                "a",
+                { className: "nav-link", href: "index.html" },
+                React.createElement("i", { className: "fa fa-fw fa-dashboard" }),
+                React.createElement(
+                  "span",
+                  { className: "nav-link-text" },
+                  "DASHBOARD."
+                )
+              )
+            ),
+            React.createElement(
+              "li",
+              { className: "nav-item", "data-toggle": "tooltip", "data-placement": "right", title: "Charts" },
+              React.createElement(
+                "a",
+                { className: "nav-link", href: "mes_scenarios.html" },
+                React.createElement("i", { className: "fa fa-fw fa-area-chart" }),
+                React.createElement(
+                  "span",
+                  { className: "nav-link-text" },
+                  "Mes sc\xE9narios."
+                )
+              )
+            ),
+            React.createElement(
+              "li",
+              { className: "nav-item", "data-toggle": "tooltip", "data-placement": "right", title: "Tables" },
+              React.createElement(
+                "a",
+                { className: "nav-link", href: "mes_lectures.html" },
+                React.createElement("i", { className: "fa fa-fw fa-table" }),
+                React.createElement(
+                  "span",
+                  { className: "nav-link-text" },
+                  "Mes lectures."
+                )
+              )
+            ),
+            React.createElement(
+              "li",
+              { className: "nav-item", "data-toggle": "tooltip", "data-placement": "right", title: "Link" },
+              React.createElement(
+                "a",
+                { className: "nav-link", href: "Catalogue.html" },
+                React.createElement("i", { className: "fa fa-fw fa-link" }),
+                React.createElement(
+                  "span",
+                  { className: "nav-link-text" },
+                  "Catalogue."
+                )
+              )
+            )
+          ),
+          React.createElement(
+            "ul",
+            { className: "navbar-nav sidenav-toggler" },
+            React.createElement(
+              "li",
+              { className: "nav-item" },
+              React.createElement(
+                "a",
+                { className: "nav-link text-center", id: "sidenavToggler" },
+                React.createElement("i", { className: "fa fa-fw fa-angle-left" })
+              )
+            )
+          ),
+          React.createElement(
+            "ul",
+            { className: "navbar-nav ml-auto" },
+            React.createElement(
+              "li",
+              { className: "nav-item dropdown" },
+              React.createElement(
+                "a",
+                { className: "nav-link dropdown-toggle mr-lg-2", id: "alertsDropdown", href: "#", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false" },
+                React.createElement("i", { className: "fa fa-fw fa-pencil" }),
+                React.createElement(
+                  "span",
+                  { className: "d-lg-none" },
+                  "Alerts"
+                ),
+                React.createElement("span", { className: "indicator text-warning d-none d-lg-block" })
+              ),
+              React.createElement(
+                "div",
+                { className: "dropdown-menu", "aria-labelledby": "alertsDropdown" },
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item", href: "#" },
+                  React.createElement(
+                    "span",
+                    { className: "text-success" },
+                    React.createElement(
+                      "strong",
+                      null,
+                      React.createElement("i", { className: "fa fa-long-arrow-up fa-fw" }),
+                      "Upload a new script"
+                    )
+                  )
+                )
+              )
+            ),
+            React.createElement(
+              "li",
+              { className: "nav-item dropdown" },
+              React.createElement(
+                "a",
+                { className: "nav-link dropdown-toggle mr-lg-2", id: "messagesDropdown", href: "#", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false" },
+                React.createElement("i", { className: "fa fa-fw fa-envelope" }),
+                React.createElement(
+                  "span",
+                  { className: "d-lg-none" },
+                  "Messages",
+                  React.createElement(
+                    "span",
+                    { className: "badge badge-pill badge-primary" },
+                    "12 New"
+                  )
+                ),
+                React.createElement(
+                  "span",
+                  { className: "indicator text-primary d-none d-lg-block" },
+                  React.createElement("i", { className: "fa fa-fw fa-circle" })
+                )
+              ),
+              React.createElement(
+                "div",
+                { className: "dropdown-menu", "aria-labelledby": "messagesDropdown" },
+                React.createElement(
+                  "h6",
+                  { className: "dropdown-header" },
+                  "New Messages:"
+                ),
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item", href: "#" },
+                  React.createElement(
+                    "strong",
+                    null,
+                    "David Miller"
+                  ),
+                  React.createElement(
+                    "span",
+                    { className: "small float-right text-muted" },
+                    "11:21 AM"
+                  ),
+                  React.createElement(
+                    "div",
+                    { className: "dropdown-message small" },
+                    "Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they dont overflow over to the sides!"
+                  )
+                ),
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item", href: "#" },
+                  React.createElement(
+                    "strong",
+                    null,
+                    "Jane Smith"
+                  ),
+                  React.createElement(
+                    "span",
+                    { className: "small float-right text-muted" },
+                    "11:21 AM"
+                  ),
+                  React.createElement(
+                    "div",
+                    { className: "dropdown-message small" },
+                    "I was wondering if you could meet for an appointment at 3:00 instead of 4:00. Thanks!"
+                  )
+                ),
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item", href: "#" },
+                  React.createElement(
+                    "strong",
+                    null,
+                    "John Doe"
+                  ),
+                  React.createElement(
+                    "span",
+                    { className: "small float-right text-muted" },
+                    "11:21 AM"
+                  ),
+                  React.createElement(
+                    "div",
+                    { className: "dropdown-message small" },
+                    "I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution."
+                  )
+                ),
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item small", href: "#" },
+                  "View all messages"
+                )
+              )
+            ),
+            React.createElement(
+              "li",
+              { className: "nav-item dropdown" },
+              React.createElement(
+                "a",
+                { className: "nav-link dropdown-toggle mr-lg-2", id: "alertsDropdown", href: "#", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false" },
+                React.createElement("i", { className: "fa fa-fw fa-bell" }),
+                React.createElement(
+                  "span",
+                  { className: "d-lg-none" },
+                  "Alerts",
+                  React.createElement(
+                    "span",
+                    { className: "badge badge-pill badge-warning" },
+                    "6 New"
+                  )
+                ),
+                React.createElement(
+                  "span",
+                  { className: "indicator text-warning d-none d-lg-block" },
+                  React.createElement("i", { className: "fa fa-fw fa-circle" })
+                )
+              ),
+              React.createElement(
+                "div",
+                { className: "dropdown-menu", "aria-labelledby": "alertsDropdown" },
+                React.createElement(
+                  "h6",
+                  { className: "dropdown-header" },
+                  "New Alerts:"
+                ),
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item", href: "#" },
+                  React.createElement(
+                    "span",
+                    { className: "text-success" },
+                    React.createElement(
+                      "strong",
+                      null,
+                      React.createElement("i", { className: "fa fa-long-arrow-up fa-fw" }),
+                      "Status Update"
+                    )
+                  ),
+                  React.createElement(
+                    "span",
+                    { className: "small float-right text-muted" },
+                    "11:21 AM"
+                  ),
+                  React.createElement(
+                    "div",
+                    { className: "dropdown-message small" },
+                    "This is an automated server response message. All systems are online."
+                  )
+                ),
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item", href: "#" },
+                  React.createElement(
+                    "span",
+                    { className: "text-danger" },
+                    React.createElement(
+                      "strong",
+                      null,
+                      React.createElement("i", { className: "fa fa-long-arrow-down fa-fw" }),
+                      "Status Update"
+                    )
+                  ),
+                  React.createElement(
+                    "span",
+                    { className: "small float-right text-muted" },
+                    "11:21 AM"
+                  ),
+                  React.createElement(
+                    "div",
+                    { className: "dropdown-message small" },
+                    "This is an automated server response message. All systems are online."
+                  )
+                ),
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item", href: "#" },
+                  React.createElement(
+                    "span",
+                    { className: "text-success" },
+                    React.createElement(
+                      "strong",
+                      null,
+                      React.createElement("i", { className: "fa fa-long-arrow-up fa-fw" }),
+                      "Status Update"
+                    )
+                  ),
+                  React.createElement(
+                    "span",
+                    { className: "small float-right text-muted" },
+                    "11:21 AM"
+                  ),
+                  React.createElement(
+                    "div",
+                    { className: "dropdown-message small" },
+                    "This is an automated server response message. All systems are online."
+                  )
+                ),
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item small", href: "#" },
+                  "View all alerts"
+                )
+              )
+            ),
+            React.createElement(
+              "li",
+              { className: "nav-item" },
+              React.createElement(
+                "form",
+                { className: "form-inline my-2 my-lg-0 mr-lg-2" },
+                React.createElement(
+                  "div",
+                  { className: "input-group" },
+                  React.createElement("input", { className: "form-control", type: "text", placeholder: "Search for..." }),
+                  React.createElement(
+                    "span",
+                    { className: "input-group-btn" },
+                    React.createElement(
+                      "button",
+                      { className: "btn btn-primary", type: "button" },
+                      React.createElement("i", { className: "fa fa-search" })
+                    )
+                  )
+                )
+              )
+            ),
+            React.createElement(
+              "li",
+              { className: "nav-item" },
+              React.createElement(
+                "a",
+                { className: "nav-link", "data-toggle": "modal", "data-target": "#exampleModal" },
+                React.createElement("i", { className: "fa fa-fw fa-sign-out" }),
+                "Logout"
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Dashboard_left;
+}(React.Component);
+
+module.exports = Dashboard_left;
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+var Breadcrumbs = __webpack_require__(33);
+var Ironcards = __webpack_require__(34);
+var Chartexample = __webpack_require__(35);
+var Feedexample = __webpack_require__(36);
+var Footer = __webpack_require__(37);
+var Scroll = __webpack_require__(38);
+var Logout = __webpack_require__(39);
+
+var Dashboard_content = function (_React$Component) {
+  _inherits(Dashboard_content, _React$Component);
+
+  function Dashboard_content() {
+    _classCallCheck(this, Dashboard_content);
+
+    return _possibleConstructorReturn(this, (Dashboard_content.__proto__ || Object.getPrototypeOf(Dashboard_content)).call(this));
+  }
+
+  _createClass(Dashboard_content, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "div",
+          { className: "content-wrapper" },
+          React.createElement(
+            "div",
+            { className: "container-fluid" },
+            React.createElement(Breadcrumbs, null),
+            React.createElement(Ironcards, null),
+            React.createElement(Chartexample, null),
+            React.createElement(Feedexample, null)
+          ),
+          React.createElement(Footer, null),
+          React.createElement(Scroll, null),
+          React.createElement(Logout, null)
+        )
+      );
+    }
+  }]);
+
+  return Dashboard_content;
+}(React.Component);
+
+module.exports = Dashboard_content;
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+
+var Breadcrumbs = function (_React$Component) {
+  _inherits(Breadcrumbs, _React$Component);
+
+  function Breadcrumbs() {
+    _classCallCheck(this, Breadcrumbs);
+
+    return _possibleConstructorReturn(this, (Breadcrumbs.__proto__ || Object.getPrototypeOf(Breadcrumbs)).call(this));
+  }
+
+  _createClass(Breadcrumbs, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "ol",
+          { className: "breadcrumb" },
+          React.createElement(
+            "li",
+            { className: "breadcrumb-item" },
+            React.createElement(
+              "a",
+              { href: "#" },
+              "Dashboard"
+            )
+          ),
+          React.createElement(
+            "li",
+            { className: "breadcrumb-item active" },
+            "My Dashboard"
+          )
+        )
+      );
+    }
+  }]);
+
+  return Breadcrumbs;
+}(React.Component);
+
+module.exports = Breadcrumbs;
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+
+var Ironcards = function (_React$Component) {
+  _inherits(Ironcards, _React$Component);
+
+  function Ironcards() {
+    _classCallCheck(this, Ironcards);
+
+    return _possibleConstructorReturn(this, (Ironcards.__proto__ || Object.getPrototypeOf(Ironcards)).call(this));
+  }
+
+  _createClass(Ironcards, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "div",
+          { className: "row" },
+          React.createElement(
+            "div",
+            { className: "col-xl-3 col-sm-6 mb-3" },
+            React.createElement(
+              "div",
+              { className: "card text-white bg-primary o-hidden h-100" },
+              React.createElement(
+                "div",
+                { className: "card-body" },
+                React.createElement(
+                  "div",
+                  { className: "card-body-icon" },
+                  React.createElement("i", { className: "fa fa-fw fa-comments" })
+                ),
+                React.createElement(
+                  "div",
+                  { className: "mr-5" },
+                  "26 New Messages!"
+                )
+              ),
+              React.createElement(
+                "a",
+                { className: "card-footer text-white clearfix small z-1", href: "#" },
+                React.createElement(
+                  "span",
+                  { className: "float-left" },
+                  "View Details"
+                ),
+                React.createElement(
+                  "span",
+                  { className: "float-right" },
+                  React.createElement("i", { className: "fa fa-angle-right" })
+                )
+              )
+            )
+          ),
+          React.createElement(
+            "div",
+            { className: "col-xl-3 col-sm-6 mb-3" },
+            React.createElement(
+              "div",
+              { className: "card text-white bg-warning o-hidden h-100" },
+              React.createElement(
+                "div",
+                { className: "card-body" },
+                React.createElement(
+                  "div",
+                  { className: "card-body-icon" },
+                  React.createElement("i", { className: "fa fa-fw fa-list" })
+                ),
+                React.createElement(
+                  "div",
+                  { className: "mr-5" },
+                  "11 New Comments!"
+                )
+              ),
+              React.createElement(
+                "a",
+                { className: "card-footer text-white clearfix small z-1", href: "#" },
+                React.createElement(
+                  "span",
+                  { className: "float-left" },
+                  "View Details"
+                ),
+                React.createElement(
+                  "span",
+                  { className: "float-right" },
+                  React.createElement("i", { className: "fa fa-angle-right" })
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Ironcards;
+}(React.Component);
+
+module.exports = Ironcards;
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+
+var Chartexample = function (_React$Component) {
+  _inherits(Chartexample, _React$Component);
+
+  function Chartexample() {
+    _classCallCheck(this, Chartexample);
+
+    return _possibleConstructorReturn(this, (Chartexample.__proto__ || Object.getPrototypeOf(Chartexample)).call(this));
+  }
+
+  _createClass(Chartexample, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "div",
+          { className: "card mb-3" },
+          React.createElement(
+            "div",
+            { className: "card-header" },
+            React.createElement("i", { className: "fa fa-area-chart" }),
+            " Mes statistiques"
+          ),
+          React.createElement(
+            "div",
+            { className: "card-body" },
+            React.createElement("canvas", { id: "myAreaChart", width: "100%", height: "30" })
+          ),
+          React.createElement(
+            "div",
+            { className: "card-footer small text-muted" },
+            "Updated yesterday at 11:59 PM"
+          )
+        )
+      );
+    }
+  }]);
+
+  return Chartexample;
+}(React.Component);
+
+module.exports = Chartexample;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+
+var Feedexample = function (_React$Component) {
+  _inherits(Feedexample, _React$Component);
+
+  function Feedexample() {
+    _classCallCheck(this, Feedexample);
+
+    return _possibleConstructorReturn(this, (Feedexample.__proto__ || Object.getPrototypeOf(Feedexample)).call(this));
+  }
+
+  _createClass(Feedexample, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "div",
+          { className: "row" },
+          React.createElement(
+            "div",
+            { className: "col-lg-8" },
+            React.createElement(
+              "div",
+              { className: "mb-0 mt-4" },
+              React.createElement("i", { className: "fa fa-newspaper-o" }),
+              " News Feed"
+            ),
+            React.createElement("hr", { className: "mt-2" }),
+            React.createElement(
+              "div",
+              { className: "card-columns" },
+              React.createElement(
+                "div",
+                { className: "card mb-3" },
+                React.createElement(
+                  "a",
+                  { href: "#" },
+                  React.createElement("img", { className: "card-img-top img-fluid w-100", src: "https://unsplash.it/700/450?image=610", alt: "" })
+                ),
+                React.createElement(
+                  "div",
+                  { className: "card-body" },
+                  React.createElement(
+                    "h6",
+                    { className: "card-title mb-1" },
+                    React.createElement(
+                      "a",
+                      { href: "#" },
+                      "David Miller"
+                    )
+                  ),
+                  React.createElement(
+                    "p",
+                    { className: "card-text small" },
+                    "These waves are looking pretty good today!",
+                    React.createElement(
+                      "a",
+                      { href: "#" },
+                      "#surfsup"
+                    )
+                  )
+                ),
+                React.createElement("hr", { className: "my-0" }),
+                React.createElement(
+                  "div",
+                  { className: "card-body py-2 small" },
+                  React.createElement(
+                    "a",
+                    { className: "mr-3 d-inline-block", href: "#" },
+                    React.createElement("i", { className: "fa fa-fw fa-thumbs-up" }),
+                    "Like"
+                  ),
+                  React.createElement(
+                    "a",
+                    { className: "mr-3 d-inline-block", href: "#" },
+                    React.createElement("i", { className: "fa fa-fw fa-comment" }),
+                    "Comment"
+                  ),
+                  React.createElement(
+                    "a",
+                    { className: "d-inline-block", href: "#" },
+                    React.createElement("i", { className: "fa fa-fw fa-share" }),
+                    "Share"
+                  )
+                ),
+                React.createElement("hr", { className: "my-0" }),
+                React.createElement(
+                  "div",
+                  { className: "card-body small bg-faded" },
+                  React.createElement(
+                    "div",
+                    { className: "media" },
+                    React.createElement("img", { className: "d-flex mr-3", src: "http://placehold.it/45x45", alt: "" }),
+                    React.createElement(
+                      "div",
+                      { className: "media-body" },
+                      React.createElement(
+                        "h6",
+                        { className: "mt-0 mb-1" },
+                        React.createElement(
+                          "a",
+                          { href: "#" },
+                          "John Smith"
+                        )
+                      ),
+                      "Very nice! I wish I was there! That looks amazing!",
+                      React.createElement(
+                        "ul",
+                        { className: "list-inline mb-0" },
+                        React.createElement(
+                          "li",
+                          { className: "list-inline-item" },
+                          React.createElement(
+                            "a",
+                            { href: "#" },
+                            "Like"
+                          )
+                        ),
+                        React.createElement(
+                          "li",
+                          { className: "list-inline-item" },
+                          "\xB7"
+                        ),
+                        React.createElement(
+                          "li",
+                          { className: "list-inline-item" },
+                          React.createElement(
+                            "a",
+                            { href: "#" },
+                            "Reply"
+                          )
+                        )
+                      ),
+                      React.createElement(
+                        "div",
+                        { className: "media mt-3" },
+                        React.createElement(
+                          "a",
+                          { className: "d-flex pr-3", href: "#" },
+                          React.createElement("img", { src: "http://placehold.it/45x45", alt: "" })
+                        ),
+                        React.createElement(
+                          "div",
+                          { className: "media-body" },
+                          React.createElement(
+                            "h6",
+                            { className: "mt-0 mb-1" },
+                            React.createElement(
+                              "a",
+                              { href: "#" },
+                              "David Miller"
+                            )
+                          ),
+                          "Next time for sure!",
+                          React.createElement(
+                            "ul",
+                            { className: "list-inline mb-0" },
+                            React.createElement(
+                              "li",
+                              { className: "list-inline-item" },
+                              React.createElement(
+                                "a",
+                                { href: "#" },
+                                "Like"
+                              )
+                            ),
+                            React.createElement(
+                              "li",
+                              { className: "list-inline-item" },
+                              "\xB7"
+                            ),
+                            React.createElement(
+                              "li",
+                              { className: "list-inline-item" },
+                              React.createElement(
+                                "a",
+                                { href: "#" },
+                                "Reply"
+                              )
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                ),
+                React.createElement(
+                  "div",
+                  { className: "card-footer small text-muted" },
+                  "Posted 32 mins ago"
+                )
+              ),
+              React.createElement(
+                "div",
+                { className: "card mb-3" },
+                React.createElement(
+                  "a",
+                  { href: "#" },
+                  React.createElement("img", { className: "card-img-top img-fluid w-100", src: "https://unsplash.it/700/450?image=180", alt: "" })
+                ),
+                React.createElement(
+                  "div",
+                  { className: "card-body" },
+                  React.createElement(
+                    "h6",
+                    { className: "card-title mb-1" },
+                    React.createElement(
+                      "a",
+                      { href: "#" },
+                      "John Smith"
+                    )
+                  ),
+                  React.createElement(
+                    "p",
+                    { className: "card-text small" },
+                    "Another day at the office...",
+                    React.createElement(
+                      "a",
+                      { href: "#" },
+                      "#workinghardorhardlyworking"
+                    )
+                  )
+                ),
+                React.createElement("hr", { className: "my-0" }),
+                React.createElement(
+                  "div",
+                  { className: "card-body py-2 small" },
+                  React.createElement(
+                    "a",
+                    { className: "mr-3 d-inline-block", href: "#" },
+                    React.createElement("i", { className: "fa fa-fw fa-thumbs-up" }),
+                    "Like"
+                  ),
+                  React.createElement(
+                    "a",
+                    { className: "mr-3 d-inline-block", href: "#" },
+                    React.createElement("i", { className: "fa fa-fw fa-comment" }),
+                    "Comment"
+                  ),
+                  React.createElement(
+                    "a",
+                    { className: "d-inline-block", href: "#" },
+                    React.createElement("i", { className: "fa fa-fw fa-share" }),
+                    "Share"
+                  )
+                ),
+                React.createElement("hr", { className: "my-0" }),
+                React.createElement(
+                  "div",
+                  { className: "card-body small bg-faded" },
+                  React.createElement(
+                    "div",
+                    { className: "media" },
+                    React.createElement("img", { className: "d-flex mr-3", src: "http://placehold.it/45x45", alt: "" }),
+                    React.createElement(
+                      "div",
+                      { className: "media-body" },
+                      React.createElement(
+                        "h6",
+                        { className: "mt-0 mb-1" },
+                        React.createElement(
+                          "a",
+                          { href: "#" },
+                          "Jessy Lucas"
+                        )
+                      ),
+                      "Where did you get that camera?! I want one!",
+                      React.createElement(
+                        "ul",
+                        { className: "list-inline mb-0" },
+                        React.createElement(
+                          "li",
+                          { className: "list-inline-item" },
+                          React.createElement(
+                            "a",
+                            { href: "#" },
+                            "Like"
+                          )
+                        ),
+                        React.createElement(
+                          "li",
+                          { className: "list-inline-item" },
+                          "\xB7"
+                        ),
+                        React.createElement(
+                          "li",
+                          { className: "list-inline-item" },
+                          React.createElement(
+                            "a",
+                            { href: "#" },
+                            "Reply"
+                          )
+                        )
+                      )
+                    )
+                  )
+                ),
+                React.createElement(
+                  "div",
+                  { className: "card-footer small text-muted" },
+                  "Posted 46 mins ago"
+                )
+              ),
+              React.createElement(
+                "div",
+                { className: "card mb-3" },
+                React.createElement(
+                  "a",
+                  { href: "#" },
+                  React.createElement("img", { className: "card-img-top img-fluid w-100", src: "https://unsplash.it/700/450?image=281", alt: "" })
+                ),
+                React.createElement(
+                  "div",
+                  { className: "card-body" },
+                  React.createElement(
+                    "h6",
+                    { className: "card-title mb-1" },
+                    React.createElement(
+                      "a",
+                      { href: "#" },
+                      "Jeffery Wellings"
+                    )
+                  ),
+                  React.createElement(
+                    "p",
+                    { className: "card-text small" },
+                    "Nice shot from the skate park!",
+                    React.createElement(
+                      "a",
+                      { href: "#" },
+                      "#kickflip"
+                    ),
+                    React.createElement(
+                      "a",
+                      { href: "#" },
+                      "#holdmybeer"
+                    ),
+                    React.createElement(
+                      "a",
+                      { href: "#" },
+                      "#igotthis"
+                    )
+                  )
+                ),
+                React.createElement("hr", { className: "my-0" }),
+                React.createElement(
+                  "div",
+                  { className: "card-body py-2 small" },
+                  React.createElement(
+                    "a",
+                    { className: "mr-3 d-inline-block", href: "#" },
+                    React.createElement("i", { className: "fa fa-fw fa-thumbs-up" }),
+                    "Like"
+                  ),
+                  React.createElement(
+                    "a",
+                    { className: "mr-3 d-inline-block", href: "#" },
+                    React.createElement("i", { className: "fa fa-fw fa-comment" }),
+                    "Comment"
+                  ),
+                  React.createElement(
+                    "a",
+                    { className: "d-inline-block", href: "#" },
+                    React.createElement("i", { className: "fa fa-fw fa-share" }),
+                    "Share"
+                  )
+                ),
+                React.createElement(
+                  "div",
+                  { className: "card-footer small text-muted" },
+                  "Posted 1 hr ago"
+                )
+              ),
+              React.createElement(
+                "div",
+                { className: "card mb-3" },
+                React.createElement(
+                  "a",
+                  { href: "#" },
+                  React.createElement("img", { className: "card-img-top img-fluid w-100", src: "https://unsplash.it/700/450?image=185", alt: "" })
+                ),
+                React.createElement(
+                  "div",
+                  { className: "card-body" },
+                  React.createElement(
+                    "h6",
+                    { className: "card-title mb-1" },
+                    React.createElement(
+                      "a",
+                      { href: "#" },
+                      "David Miller"
+                    )
+                  ),
+                  React.createElement(
+                    "p",
+                    { className: "card-text small" },
+                    "Its hot, and I might be lost...",
+                    React.createElement(
+                      "a",
+                      { href: "#" },
+                      "#desert"
+                    ),
+                    React.createElement(
+                      "a",
+                      { href: "#" },
+                      "#water"
+                    ),
+                    React.createElement(
+                      "a",
+                      { href: "#" },
+                      "#anyonehavesomewater"
+                    ),
+                    React.createElement(
+                      "a",
+                      { href: "#" },
+                      "#noreally"
+                    ),
+                    React.createElement(
+                      "a",
+                      { href: "#" },
+                      "#thirsty"
+                    ),
+                    React.createElement(
+                      "a",
+                      { href: "#" },
+                      "#dehydration"
+                    )
+                  )
+                ),
+                React.createElement("hr", { className: "my-0" }),
+                React.createElement(
+                  "div",
+                  { className: "card-body py-2 small" },
+                  React.createElement(
+                    "a",
+                    { className: "mr-3 d-inline-block", href: "#" },
+                    React.createElement("i", { className: "fa fa-fw fa-thumbs-up" }),
+                    "Like"
+                  ),
+                  React.createElement(
+                    "a",
+                    { className: "mr-3 d-inline-block", href: "#" },
+                    React.createElement("i", { className: "fa fa-fw fa-comment" }),
+                    "Comment"
+                  ),
+                  React.createElement(
+                    "a",
+                    { className: "d-inline-block", href: "#" },
+                    React.createElement("i", { className: "fa fa-fw fa-share" }),
+                    "Share"
+                  )
+                ),
+                React.createElement("hr", { className: "my-0" }),
+                React.createElement(
+                  "div",
+                  { className: "card-body small bg-faded" },
+                  React.createElement(
+                    "div",
+                    { className: "media" },
+                    React.createElement("img", { className: "d-flex mr-3", src: "http://placehold.it/45x45", alt: "" }),
+                    React.createElement(
+                      "div",
+                      { className: "media-body" },
+                      React.createElement(
+                        "h6",
+                        { className: "mt-0 mb-1" },
+                        React.createElement(
+                          "a",
+                          { href: "#" },
+                          "John Smith"
+                        )
+                      ),
+                      "The oasis is a mile that way, or is that just a mirage?",
+                      React.createElement(
+                        "ul",
+                        { className: "list-inline mb-0" },
+                        React.createElement(
+                          "li",
+                          { className: "list-inline-item" },
+                          React.createElement(
+                            "a",
+                            { href: "#" },
+                            "Like"
+                          )
+                        ),
+                        React.createElement(
+                          "li",
+                          { className: "list-inline-item" },
+                          "\xB7"
+                        ),
+                        React.createElement(
+                          "li",
+                          { className: "list-inline-item" },
+                          React.createElement(
+                            "a",
+                            { href: "#" },
+                            "Reply"
+                          )
+                        )
+                      ),
+                      React.createElement(
+                        "div",
+                        { className: "media mt-3" },
+                        React.createElement(
+                          "a",
+                          { className: "d-flex pr-3", href: "#" },
+                          React.createElement("img", { src: "http://placehold.it/45x45", alt: "" })
+                        ),
+                        React.createElement(
+                          "div",
+                          { className: "media-body" },
+                          React.createElement(
+                            "h6",
+                            { className: "mt-0 mb-1" },
+                            React.createElement(
+                              "a",
+                              { href: "#" },
+                              "David Miller"
+                            )
+                          ),
+                          React.createElement("img", { className: "img-fluid w-100 mb-1", src: "https://unsplash.it/700/450?image=789", alt: "" }),
+                          "I m saved, I found a cactus. How do I open this thing?",
+                          React.createElement(
+                            "ul",
+                            { className: "list-inline mb-0" },
+                            React.createElement(
+                              "li",
+                              { className: "list-inline-item" },
+                              React.createElement(
+                                "a",
+                                { href: "#" },
+                                "Like"
+                              )
+                            ),
+                            React.createElement(
+                              "li",
+                              { className: "list-inline-item" },
+                              "\xB7"
+                            ),
+                            React.createElement(
+                              "li",
+                              { className: "list-inline-item" },
+                              React.createElement(
+                                "a",
+                                { href: "#" },
+                                "Reply"
+                              )
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                ),
+                React.createElement(
+                  "div",
+                  { className: "card-footer small text-muted" },
+                  "Posted yesterday"
+                )
+              )
+            )
+          ),
+          React.createElement("div", { className: "col-lg-4" })
+        )
+      );
+    }
+  }]);
+
+  return Feedexample;
+}(React.Component);
+
+module.exports = Feedexample;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+
+var Footer = function (_React$Component) {
+  _inherits(Footer, _React$Component);
+
+  function Footer() {
+    _classCallCheck(this, Footer);
+
+    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this));
+  }
+
+  _createClass(Footer, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "footer",
+          { className: "sticky-footer" },
+          React.createElement(
+            "div",
+            { className: "container" },
+            React.createElement(
+              "div",
+              { className: "text-center" },
+              React.createElement(
+                "small",
+                null,
+                "Copyright \xA9 Your Website 2017"
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Footer;
+}(React.Component);
+
+module.exports = Footer;
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+
+var Scroll = function (_React$Component) {
+  _inherits(Scroll, _React$Component);
+
+  function Scroll() {
+    _classCallCheck(this, Scroll);
+
+    return _possibleConstructorReturn(this, (Scroll.__proto__ || Object.getPrototypeOf(Scroll)).call(this));
+  }
+
+  _createClass(Scroll, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "a",
+          { className: "scroll-to-top rounded", href: "#page-top" },
+          React.createElement("i", { className: "fa fa-angle-up" })
+        )
+      );
+    }
+  }]);
+
+  return Scroll;
+}(React.Component);
+
+module.exports = Scroll;
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+
+var Logout = function (_React$Component) {
+  _inherits(Logout, _React$Component);
+
+  function Logout() {
+    _classCallCheck(this, Logout);
+
+    return _possibleConstructorReturn(this, (Logout.__proto__ || Object.getPrototypeOf(Logout)).call(this));
+  }
+
+  _createClass(Logout, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "div",
+          { className: "modal fade", id: "exampleModal", tabindex: "-1", role: "dialog", "aria-labelledby": "exampleModalLabel", "aria-hidden": "true" },
+          React.createElement(
+            "div",
+            { className: "modal-dialog", role: "document" },
+            React.createElement(
+              "div",
+              { className: "modal-content" },
+              React.createElement(
+                "div",
+                { className: "modal-header" },
+                React.createElement(
+                  "h5",
+                  { className: "modal-title", id: "exampleModalLabel" },
+                  "Ready to Leave?"
+                ),
+                React.createElement(
+                  "button",
+                  { className: "close", type: "button", "data-dismiss": "modal", "aria-label": "Close" },
+                  React.createElement(
+                    "span",
+                    { "aria-hidden": "true" },
+                    "\xD7"
+                  )
+                )
+              ),
+              React.createElement(
+                "div",
+                { className: "modal-body" },
+                "Select \"Logout\" below if you are ready to end your current session."
+              ),
+              React.createElement(
+                "div",
+                { className: "modal-footer" },
+                React.createElement(
+                  "button",
+                  { className: "btn btn-secondary", type: "button", "data-dismiss": "modal" },
+                  "Cancel"
+                ),
+                React.createElement(
+                  "a",
+                  { className: "btn btn-primary", href: "login.html" },
+                  "Logout"
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Logout;
+}(React.Component);
+
+module.exports = Logout;
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+var Border = __webpack_require__(41);
+var Content = __webpack_require__(44);
+var Footer = __webpack_require__(48);
+var Logout = __webpack_require__(49);
+
+var Mes_scenarios = function (_React$Component) {
+  _inherits(Mes_scenarios, _React$Component);
+
+  function Mes_scenarios() {
+    _classCallCheck(this, Mes_scenarios);
+
+    return _possibleConstructorReturn(this, (Mes_scenarios.__proto__ || Object.getPrototypeOf(Mes_scenarios)).call(this));
+  }
+
+  _createClass(Mes_scenarios, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "div",
+          { className: "fixed-nav sticky-footer bg-dark", id: "page-top" },
+          React.createElement(Border, null),
+          React.createElement(Content, null),
+          React.createElement(Footer, null),
+          React.createElement(Logout, null)
+        )
+      );
+    }
+  }]);
+
+  return Mes_scenarios;
+}(React.Component);
+
+module.exports = Mes_scenarios;
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+var Border_up = __webpack_require__(42);
+var Border_left = __webpack_require__(43);
+
+var Border = function (_React$Component) {
+  _inherits(Border, _React$Component);
+
+  function Border() {
+    _classCallCheck(this, Border);
+
+    return _possibleConstructorReturn(this, (Border.__proto__ || Object.getPrototypeOf(Border)).call(this));
+  }
+
+  _createClass(Border, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "nav",
+          { className: "navbar navbar-expand-lg navbar-dark bg-dark fixed-top", style: { paddingTop: '0px', paddingBottom: '0px' }, id: "mainNav" },
+          React.createElement(Border_up, null),
+          React.createElement(Border_left, null)
+        )
+      );
+    }
+  }]);
+
+  return Border;
+}(React.Component);
+
+module.exports = Border;
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+
+var Border_up = function (_React$Component) {
+  _inherits(Border_up, _React$Component);
+
+  function Border_up() {
+    _classCallCheck(this, Border_up);
+
+    return _possibleConstructorReturn(this, (Border_up.__proto__ || Object.getPrototypeOf(Border_up)).call(this));
+  }
+
+  _createClass(Border_up, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "a",
+          { className: "navbar-brand", href: "index.html" },
+          "Scriptology"
+        ),
+        React.createElement(
+          "button",
+          { className: "navbar-toggler navbar-toggler-right", type: "button", "data-toggle": "collapse", "data-target": "#navbarResponsive", "aria-controls": "navbarResponsive", "aria-expanded": "false", "aria-label": "Toggle navigation" },
+          React.createElement("span", { className: "navbar-toggler-icon" })
+        )
+      );
+    }
+  }]);
+
+  return Border_up;
+}(React.Component);
+
+module.exports = Border_up;
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+
+var Border_left = function (_React$Component) {
+  _inherits(Border_left, _React$Component);
+
+  function Border_left() {
+    _classCallCheck(this, Border_left);
+
+    return _possibleConstructorReturn(this, (Border_left.__proto__ || Object.getPrototypeOf(Border_left)).call(this));
+  }
+
+  _createClass(Border_left, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "div",
+          { className: "collapse navbar-collapse", id: "navbarResponsive" },
+          React.createElement(
+            "ul",
+            { className: "navbar-nav navbar-sidenav", id: "exampleAccordion" },
+            React.createElement(
+              "li",
+              { className: "nav-item", "data-toggle": "tooltip", "data-placement": "right", title: "Dashboard" },
+              React.createElement(
+                "a",
+                { className: "nav-link", href: "index.html" },
+                React.createElement("i", { className: "fa fa-fw fa-dashboard" }),
+                React.createElement(
+                  "span",
+                  { style: { fontFamily: 'Courier New' }, className: "nav-link-text" },
+                  "DASHBOARD."
+                )
+              )
+            ),
+            React.createElement(
+              "li",
+              { className: "nav-item", "data-toggle": "tooltip", "data-placement": "right", title: "Charts" },
+              React.createElement(
+                "a",
+                { className: "nav-link", href: "mes_scenarios.html" },
+                React.createElement("i", { className: "fa fa-fw fa-area-chart" }),
+                React.createElement(
+                  "span",
+                  { style: { fontFamily: 'Courier New' }, className: "nav-link-text" },
+                  "Mes sc\xE9narios."
+                )
+              )
+            ),
+            React.createElement(
+              "li",
+              { className: "nav-item", "data-toggle": "tooltip", "data-placement": "right", title: "Tables" },
+              React.createElement(
+                "a",
+                { className: "nav-link", href: "mes_lectures.html" },
+                React.createElement("i", { className: "fa fa-fw fa-table" }),
+                React.createElement(
+                  "span",
+                  { style: { fontFamily: 'Courier New' }, className: "nav-link-text" },
+                  "Mes lectures."
+                )
+              )
+            ),
+            React.createElement(
+              "li",
+              { className: "nav-item", "data-toggle": "tooltip", "data-placement": "right", title: "Link" },
+              React.createElement(
+                "a",
+                { className: "nav-link", href: "Catalogue.html" },
+                React.createElement("i", { className: "fa fa-fw fa-link" }),
+                React.createElement(
+                  "span",
+                  { style: { fontFamily: 'Courier New' }, className: "nav-link-text" },
+                  "Catalogue."
+                )
+              )
+            )
+          ),
+          React.createElement(
+            "ul",
+            { className: "navbar-nav sidenav-toggler" },
+            React.createElement(
+              "li",
+              { className: "nav-item" },
+              React.createElement(
+                "a",
+                { className: "nav-link text-center", id: "sidenavToggler" },
+                React.createElement("i", { className: "fa fa-fw fa-angle-left" })
+              )
+            )
+          ),
+          React.createElement(
+            "ul",
+            { style: { color: 'rgba(255, 255, 255, 0.5)' }, className: "navbar-nav ml-auto" },
+            React.createElement(
+              "li",
+              { className: "nav-item dropdown" },
+              React.createElement(
+                "a",
+                { className: "nav-link dropdown-toggle mr-lg-2", id: "alertsDropdown", href: "#", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false" },
+                React.createElement("i", { className: "fa fa-fw fa-pencil" }),
+                React.createElement(
+                  "span",
+                  { className: "d-lg-none" },
+                  "Alerts"
+                ),
+                React.createElement("span", { className: "indicator text-warning d-none d-lg-block" })
+              ),
+              React.createElement(
+                "div",
+                { className: "dropdown-menu", "aria-labelledby": "alertsDropdown" },
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item", href: "#" },
+                  React.createElement(
+                    "span",
+                    { className: "text-success" },
+                    React.createElement(
+                      "strong",
+                      null,
+                      React.createElement("i", { className: "fa fa-long-arrow-up fa-fw" }),
+                      "Upload a new script"
+                    )
+                  )
+                )
+              )
+            ),
+            React.createElement(
+              "li",
+              { className: "nav-item dropdown" },
+              React.createElement(
+                "a",
+                { className: "nav-link dropdown-toggle mr-lg-2", id: "messagesDropdown", href: "#", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false" },
+                React.createElement("i", { className: "fa fa-fw fa-envelope" }),
+                React.createElement(
+                  "span",
+                  { className: "d-lg-none" },
+                  "Messages",
+                  React.createElement(
+                    "span",
+                    { className: "badge badge-pill badge-primary" },
+                    "12 New"
+                  )
+                ),
+                React.createElement(
+                  "span",
+                  { className: "indicator text-primary d-none d-lg-block" },
+                  React.createElement("i", { className: "fa fa-fw fa-circle" })
+                )
+              ),
+              React.createElement(
+                "div",
+                { className: "dropdown-menu", "aria-labelledby": "messagesDropdown" },
+                React.createElement(
+                  "h6",
+                  { className: "dropdown-header" },
+                  "New Messages:"
+                ),
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item", href: "#" },
+                  React.createElement(
+                    "strong",
+                    null,
+                    "David Miller"
+                  ),
+                  React.createElement(
+                    "span",
+                    { className: "small float-right text-muted" },
+                    "11:21 AM"
+                  ),
+                  React.createElement(
+                    "div",
+                    { className: "dropdown-message small" },
+                    "Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they dont overflow over to the sides!"
+                  )
+                ),
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item", href: "#" },
+                  React.createElement(
+                    "strong",
+                    null,
+                    "Jane Smith"
+                  ),
+                  React.createElement(
+                    "span",
+                    { className: "small float-right text-muted" },
+                    "11:21 AM"
+                  ),
+                  React.createElement(
+                    "div",
+                    { className: "dropdown-message small" },
+                    "I was wondering if you could meet for an appointment at 3:00 instead of 4:00 Thanks"
+                  )
+                ),
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item", href: "#" },
+                  React.createElement(
+                    "strong",
+                    null,
+                    "John Doe"
+                  ),
+                  React.createElement(
+                    "span",
+                    { className: "small float-right text-muted" },
+                    "11:21 AM"
+                  ),
+                  React.createElement(
+                    "div",
+                    { className: "dropdown-message small" },
+                    "I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution."
+                  )
+                ),
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item small", href: "#" },
+                  "View all messages"
+                )
+              )
+            ),
+            React.createElement(
+              "li",
+              { className: "nav-item dropdown" },
+              React.createElement(
+                "a",
+                { className: "nav-link dropdown-toggle mr-lg-2", id: "alertsDropdown", href: "#", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false" },
+                React.createElement("i", { className: "fa fa-fw fa-bell" }),
+                React.createElement(
+                  "span",
+                  { className: "d-lg-none" },
+                  "Alerts",
+                  React.createElement(
+                    "span",
+                    { className: "badge badge-pill badge-warning" },
+                    "6 New"
+                  )
+                ),
+                React.createElement(
+                  "span",
+                  { className: "indicator text-warning d-none d-lg-block" },
+                  React.createElement("i", { className: "fa fa-fw fa-circle" })
+                )
+              ),
+              React.createElement(
+                "div",
+                { className: "dropdown-menu", "aria-labelledby": "alertsDropdown" },
+                React.createElement(
+                  "h6",
+                  { className: "dropdown-header" },
+                  "New Alerts:"
+                ),
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item", href: "#" },
+                  React.createElement(
+                    "span",
+                    { className: "text-success" },
+                    React.createElement(
+                      "strong",
+                      null,
+                      React.createElement("i", { className: "fa fa-long-arrow-up fa-fw" }),
+                      "Status Update"
+                    )
+                  ),
+                  React.createElement(
+                    "span",
+                    { className: "small float-right text-muted" },
+                    "11:21 AM"
+                  ),
+                  React.createElement(
+                    "div",
+                    { className: "dropdown-message small" },
+                    "This is an automated server response message All systems are online."
+                  )
+                ),
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item", href: "#" },
+                  React.createElement(
+                    "span",
+                    { className: "text-danger" },
+                    React.createElement(
+                      "strong",
+                      null,
+                      React.createElement("i", { className: "fa fa-long-arrow-down fa-fw" }),
+                      "Status Update"
+                    )
+                  ),
+                  React.createElement(
+                    "span",
+                    { className: "small float-right text-muted" },
+                    "11:21 AM"
+                  ),
+                  React.createElement(
+                    "div",
+                    { className: "dropdown-message small" },
+                    "This is an automated server response message All systems are online."
+                  )
+                ),
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item", href: "#" },
+                  React.createElement(
+                    "span",
+                    { className: "text-success" },
+                    React.createElement(
+                      "strong",
+                      null,
+                      React.createElement("i", { className: "fa fa-long-arrow-up fa-fw" }),
+                      "Status Update"
+                    )
+                  ),
+                  React.createElement(
+                    "span",
+                    { className: "small float-right text-muted" },
+                    "11:21 AM"
+                  ),
+                  React.createElement(
+                    "div",
+                    { className: "dropdown-message small" },
+                    "This is an automated server response message All systems are online."
+                  )
+                ),
+                React.createElement("div", { className: "dropdown-divider" }),
+                React.createElement(
+                  "a",
+                  { className: "dropdown-item small", href: "#" },
+                  "View all alerts"
+                )
+              )
+            ),
+            React.createElement(
+              "li",
+              { className: "nav-item" },
+              React.createElement(
+                "form",
+                { className: "form-inline my-2 my-lg-0 mr-lg-2" },
+                React.createElement(
+                  "div",
+                  { className: "input-group" },
+                  React.createElement("input", { className: "form-control", type: "text", placeholder: "Search for..." }),
+                  React.createElement(
+                    "span",
+                    { className: "input-group-btn" },
+                    React.createElement(
+                      "button",
+                      { className: "btn btn-primary", type: "button" },
+                      React.createElement("i", { className: "fa fa-search" })
+                    )
+                  )
+                )
+              )
+            ),
+            React.createElement(
+              "li",
+              { className: "nav-item" },
+              React.createElement(
+                "a",
+                { className: "nav-link", "data-toggle": "modal", "data-target": "#exampleModal" },
+                React.createElement("i", { className: "fa fa-fw fa-sign-out" }),
+                "Logout"
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Border_left;
+}(React.Component);
+
+module.exports = Border_left;
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+var Section = __webpack_require__(45);
+var Scenarios = __webpack_require__(46);
+var Newfeeds = __webpack_require__(47);
+
+var Border = function (_React$Component) {
+  _inherits(Border, _React$Component);
+
+  function Border() {
+    _classCallCheck(this, Border);
+
+    return _possibleConstructorReturn(this, (Border.__proto__ || Object.getPrototypeOf(Border)).call(this));
+  }
+
+  _createClass(Border, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "div",
+          { className: "content-wrapper" },
+          React.createElement(
+            "div",
+            { style: { marginTop: '40px' }, className: "container-fluid" },
+            React.createElement(Section, null),
+            React.createElement(Scenarios, null),
+            React.createElement(Newfeeds, null)
+          )
+        )
+      );
+    }
+  }]);
+
+  return Border;
+}(React.Component);
+
+module.exports = Border;
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+
+var Section = function (_React$Component) {
+  _inherits(Section, _React$Component);
+
+  function Section() {
+    _classCallCheck(this, Section);
+
+    return _possibleConstructorReturn(this, (Section.__proto__ || Object.getPrototypeOf(Section)).call(this));
+  }
+
+  _createClass(Section, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "ol",
+          { className: "breadcrumb" },
+          React.createElement(
+            "li",
+            { className: "breadcrumb-item" },
+            React.createElement(
+              "a",
+              { href: "#" },
+              "Dashboard"
+            )
+          ),
+          React.createElement(
+            "li",
+            { className: "breadcrumb-item active" },
+            "Mes sc\xE9narios"
+          )
+        )
+      );
+    }
+  }]);
+
+  return Section;
+}(React.Component);
+
+module.exports = Section;
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+
+var Scenarios = function (_React$Component) {
+  _inherits(Scenarios, _React$Component);
+
+  function Scenarios() {
+    _classCallCheck(this, Scenarios);
+
+    return _possibleConstructorReturn(this, (Scenarios.__proto__ || Object.getPrototypeOf(Scenarios)).call(this));
+  }
+
+  _createClass(Scenarios, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "section",
+          { className: "bg-light", id: "portfolio" },
+          React.createElement(
+            "div",
+            { className: "container" },
+            React.createElement(
+              "div",
+              { className: "row" },
+              React.createElement("div", { className: "col-lg-12 text-center" })
+            ),
+            React.createElement(
+              "div",
+              { className: "row" },
+              React.createElement(
+                "div",
+                { className: "col-md-4 col-sm-4 portfolio-item" },
+                React.createElement(
+                  "a",
+                  { className: "portfolio-link", "data-toggle": "modal", href: "#portfolioModal1" },
+                  React.createElement(
+                    "div",
+                    { className: "portfolio-hover" },
+                    React.createElement(
+                      "div",
+                      { className: "portfolio-hover-content" },
+                      React.createElement("i", { className: "fa fa-plus fa-3x" })
+                    )
+                  ),
+                  React.createElement("img", { className: "img-fluid", src: "images/rvlf.jpg", alt: "" })
+                ),
+                React.createElement(
+                  "div",
+                  { className: "portfolio-caption" },
+                  React.createElement(
+                    "h4",
+                    null,
+                    "Retour vers le futur"
+                  ),
+                  React.createElement(
+                    "p",
+                    { className: "text-muted" },
+                    "Auteur"
+                  ),
+                  React.createElement(
+                    "p",
+                    { className: "loglinetest" },
+                    "Un adolescent d\xE9brouillard est projet\xE9 dans le pass\xE9 o\xF9 il doit faire se rencontrer ses parents pour ne pas dispara\xEEtre et r\xE9tablir le cours du temps qu\u2019il a chang\xE9."
+                  ),
+                  React.createElement(
+                    "a",
+                    { className: "nav-link", href: "#" },
+                    React.createElement("img", { className: "img-fluid", style: { height: '18px' }, src: "images/Etoile-de-notation-455.jpg", alt: "" })
+                  )
+                )
+              ),
+              React.createElement(
+                "div",
+                { className: "col-md-4 col-sm-4 portfolio-item" },
+                React.createElement(
+                  "a",
+                  { className: "portfolio-link", "data-toggle": "modal", href: "#portfolioModal1" },
+                  React.createElement(
+                    "div",
+                    { className: "portfolio-hover" },
+                    React.createElement(
+                      "div",
+                      { className: "portfolio-hover-content" },
+                      React.createElement("i", { className: "fa fa-plus fa-3x" })
+                    )
+                  ),
+                  React.createElement("img", { className: "img-fluid", src: "images/rvlf.jpg", alt: "" })
+                ),
+                React.createElement(
+                  "div",
+                  { className: "portfolio-caption" },
+                  React.createElement(
+                    "h4",
+                    null,
+                    "Retour vers le futur"
+                  ),
+                  React.createElement(
+                    "p",
+                    { className: "text-muted" },
+                    "Auteur"
+                  ),
+                  React.createElement(
+                    "p",
+                    { className: "loglinetest" },
+                    "Un adolescent d\xE9brouillard est projet\xE9 dans le pass\xE9 o\xF9 il doit faire se rencontrer ses parents pour ne pas dispara\xEEtre et r\xE9tablir le cours du temps qu\u2019il a chang\xE9."
+                  ),
+                  React.createElement(
+                    "a",
+                    { className: "nav-link", href: "#" },
+                    React.createElement("img", { className: "img-fluid", style: { height: '18px' }, src: "images/Etoile-de-notation-455.jpg", alt: "" })
+                  )
+                )
+              ),
+              React.createElement(
+                "div",
+                { className: "col-md-4 col-sm-4 portfolio-item" },
+                React.createElement(
+                  "a",
+                  { className: "portfolio-link", "data-toggle": "modal", href: "#portfolioModal1" },
+                  React.createElement(
+                    "div",
+                    { className: "portfolio-hover" },
+                    React.createElement(
+                      "div",
+                      { className: "portfolio-hover-content" },
+                      React.createElement("i", { className: "fa fa-plus fa-3x" })
+                    )
+                  ),
+                  React.createElement("img", { className: "img-fluid", src: "images/rvlf.jpg", alt: "" })
+                ),
+                React.createElement(
+                  "div",
+                  { className: "portfolio-caption" },
+                  React.createElement(
+                    "h4",
+                    null,
+                    "Retour vers le futur"
+                  ),
+                  React.createElement(
+                    "p",
+                    { className: "text-muted" },
+                    "Auteur"
+                  ),
+                  React.createElement(
+                    "p",
+                    { className: "loglinetest" },
+                    "Un adolescent d\xE9brouillard est projet\xE9 dans le pass\xE9 o\xF9 il doit faire se rencontrer ses parents pour ne pas dispara\xEEtre et r\xE9tablir le cours du temps qu\u2019il a chang\xE9."
+                  ),
+                  React.createElement(
+                    "a",
+                    { className: "nav-link", href: "#" },
+                    React.createElement("img", { className: "img-fluid", style: { height: '18px' }, src: "images/Etoile-de-notation-455.jpg", alt: "" })
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Scenarios;
+}(React.Component);
+
+module.exports = Scenarios;
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+
+var Newfeeds = function (_React$Component) {
+  _inherits(Newfeeds, _React$Component);
+
+  function Newfeeds() {
+    _classCallCheck(this, Newfeeds);
+
+    return _possibleConstructorReturn(this, (Newfeeds.__proto__ || Object.getPrototypeOf(Newfeeds)).call(this));
+  }
+
+  _createClass(Newfeeds, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "div",
+          { className: "col-lg-4" },
+          React.createElement(
+            "div",
+            { className: "card mb-3" },
+            React.createElement(
+              "div",
+              { className: "card-header" },
+              React.createElement("i", { className: "fa fa-bell-o" }),
+              " New comments"
+            ),
+            React.createElement(
+              "div",
+              { className: "list-group list-group-flush small" },
+              React.createElement(
+                "a",
+                { className: "list-group-item list-group-item-action", href: "#" },
+                React.createElement(
+                  "div",
+                  { className: "media" },
+                  React.createElement("img", { className: "d-flex mr-3 rounded-circle", src: "http://placehold.it/45x45", alt: "" }),
+                  React.createElement(
+                    "div",
+                    { className: "media-body" },
+                    React.createElement(
+                      "strong",
+                      null,
+                      "David Miller"
+                    ),
+                    " posted a new comment to",
+                    React.createElement(
+                      "strong",
+                      null,
+                      " your scenario : \"LA Confidential\" "
+                    ),
+                    ".",
+                    React.createElement(
+                      "div",
+                      { className: "text-muted smaller" },
+                      "Today at 5:43 PM - 5 m ago"
+                    )
+                  )
+                )
+              ),
+              React.createElement(
+                "a",
+                { className: "list-group-item list-group-item-action", href: "#" },
+                React.createElement(
+                  "div",
+                  { className: "media" },
+                  React.createElement("img", { className: "d-flex mr-3 rounded-circle", src: "http://placehold.it/45x45", alt: "" }),
+                  React.createElement(
+                    "div",
+                    { className: "media-body" },
+                    React.createElement(
+                      "strong",
+                      null,
+                      "Samantha King"
+                    ),
+                    " sent you a new message!",
+                    React.createElement(
+                      "div",
+                      { className: "text-muted smaller" },
+                      "Today at 4:37 PM - 1 hr ago"
+                    )
+                  )
+                )
+              ),
+              React.createElement(
+                "a",
+                { className: "list-group-item list-group-item-action", href: "#" },
+                React.createElement(
+                  "div",
+                  { className: "media" },
+                  React.createElement("img", { className: "d-flex mr-3 rounded-circle", src: "http://placehold.it/45x45", alt: "" }),
+                  React.createElement(
+                    "div",
+                    { className: "media-body" },
+                    React.createElement(
+                      "strong",
+                      null,
+                      "Jeffery Wellings"
+                    ),
+                    " posted a new comment to",
+                    React.createElement(
+                      "strong",
+                      null,
+                      "your scenario : \"Les Bronz\xE9s font du ski 3\" "
+                    ),
+                    ".",
+                    React.createElement(
+                      "div",
+                      { className: "text-muted smaller" },
+                      "Today at 4:31 PM - 1 hr ago"
+                    )
+                  )
+                )
+              ),
+              React.createElement(
+                "a",
+                { className: "list-group-item list-group-item-action", href: "#" },
+                React.createElement(
+                  "div",
+                  { className: "media" },
+                  React.createElement("img", { className: "d-flex mr-3 rounded-circle", src: "http://placehold.it/45x45", alt: "" }),
+                  React.createElement(
+                    "div",
+                    { className: "media-body" },
+                    React.createElement(
+                      "strong",
+                      null,
+                      "Monica Dennis"
+                    ),
+                    " posted a new comment to",
+                    React.createElement(
+                      "strong",
+                      null,
+                      " your scenario : \"Les Bidasses en Folie\" "
+                    ),
+                    ".",
+                    React.createElement(
+                      "div",
+                      { className: "text-muted smaller" },
+                      "Today at 3:54 PM - 2 hrs ago"
+                    )
+                  )
+                )
+              ),
+              React.createElement(
+                "a",
+                { className: "list-group-item list-group-item-action", href: "#" },
+                "View all activity..."
+              )
+            ),
+            React.createElement(
+              "div",
+              { className: "card-footer small text-muted" },
+              "Updated yesterday at 11:59 PM"
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Newfeeds;
+}(React.Component);
+
+module.exports = Newfeeds;
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+
+var Footer = function (_React$Component) {
+  _inherits(Footer, _React$Component);
+
+  function Footer() {
+    _classCallCheck(this, Footer);
+
+    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this));
+  }
+
+  _createClass(Footer, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "footer",
+          { className: "sticky-footer" },
+          React.createElement(
+            "div",
+            { className: "container" },
+            React.createElement(
+              "div",
+              { className: "text-center" },
+              React.createElement(
+                "small",
+                null,
+                "Copyright \xA9 Your Website 2017"
+              )
+            )
+          )
+        ),
+        React.createElement(
+          "a",
+          { className: "scroll-to-top rounded", href: "#page-top" },
+          React.createElement("i", { className: "fa fa-angle-up" })
+        )
+      );
+    }
+  }]);
+
+  return Footer;
+}(React.Component);
+
+module.exports = Footer;
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(0);
+
+var Logout = function (_React$Component) {
+  _inherits(Logout, _React$Component);
+
+  function Logout() {
+    _classCallCheck(this, Logout);
+
+    return _possibleConstructorReturn(this, (Logout.__proto__ || Object.getPrototypeOf(Logout)).call(this));
+  }
+
+  _createClass(Logout, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "div",
+          { className: "modal fade", id: "exampleModal", tabindex: "-1", role: "dialog", "aria-labelledby": "exampleModalLabel", "aria-hidden": "true" },
+          React.createElement(
+            "div",
+            { className: "modal-dialog", role: "document" },
+            React.createElement(
+              "div",
+              { className: "modal-content" },
+              React.createElement(
+                "div",
+                { className: "modal-header" },
+                React.createElement(
+                  "h5",
+                  { className: "modal-title", id: "exampleModalLabel" },
+                  "Ready to Leave?"
+                ),
+                React.createElement(
+                  "button",
+                  { className: "close", type: "button", "data-dismiss": "modal", "aria-label": "Close" },
+                  React.createElement(
+                    "span",
+                    { "aria-hidden": "true" },
+                    "\xD7"
+                  )
+                )
+              ),
+              React.createElement(
+                "div",
+                { className: "modal-body" },
+                "Select \"Logout\" below if you are ready to end your current session."
+              ),
+              React.createElement(
+                "div",
+                { className: "modal-footer" },
+                React.createElement(
+                  "button",
+                  { className: "btn btn-secondary", type: "button", "data-dismiss": "modal" },
+                  "Cancel"
+                ),
+                React.createElement(
+                  "a",
+                  { className: "btn btn-primary", href: "login.html" },
+                  "Logout"
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Logout;
+}(React.Component);
+
+module.exports = Logout;
 
 /***/ })
 /******/ ]);
