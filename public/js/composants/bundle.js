@@ -16076,7 +16076,7 @@ var App = function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return React.createElement(LireScenario, null);
+      return React.createElement(Catalogue, null);
     }
   }]);
 
