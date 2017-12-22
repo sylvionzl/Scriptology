@@ -1,4 +1,7 @@
 var React = require("react");
+var Link = require('react-router-dom').Link;
+
+
 import { Button } from 'react-bootstrap';
 
 
@@ -16,8 +19,9 @@ class Header extends React.Component {
           <div className="intro-text">
             <div className="intro-heading text-uppercase">Le temple du scénario.</div>
             <div className="intro-lead-in">Rejoignez-nous!</div>
-
-            <Button bsSize="large" className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="Notrehistoire.html">Que fait-on ?</Button>
+            <Link to="/notrehistoire">
+              <Button bsSize="large" className="btn btn-primary btn-xl text-uppercase js-scroll-trigger">Que fait-on ?</Button>
+            </Link>
           </div>
         </div>
       </header>

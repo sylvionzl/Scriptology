@@ -1,4 +1,5 @@
 var React = require("react");
+var Link = require('react-router-dom').Link;
 
 class Scenarios extends React.Component {
   constructor() {
@@ -18,6 +19,7 @@ class Scenarios extends React.Component {
            <div className="row">
 
              <div className="col-md-4 col-sm-4 portfolio-item">
+               <Link to="/lirescenario">
                <a className="portfolio-link" data-toggle="modal" href="#portfolioModal1">
                  <div className="portfolio-hover">
                    <div className="portfolio-hover-content">
@@ -26,13 +28,14 @@ class Scenarios extends React.Component {
                  </div>
                  <img className="img-fluid" src="images/rvlf.jpg" alt=""/>
                </a>
+               </Link>
                <div className="portfolio-caption">
                  <h4>Retour vers le futur</h4>
                  <p className="text-muted">Auteur</p>
                  <p className="loglinetest">Un adolescent débrouillard est projeté dans le passé où il doit faire se rencontrer ses parents pour ne pas disparaître et rétablir le cours du temps qu’il a changé.</p>
-                 <a className="nav-link" href="#">
+                 <Link to="/lirescenario">
                    <img className="img-fluid" style={{ height: '18px'}} src="images/Etoile-de-notation-455.jpg" alt=""/>
-                 </a>
+                 </Link>
                </div>
              </div>
 

@@ -1,4 +1,5 @@
 var React = require("react");
+var Link = require('react-router-dom').Link;
 
 class Border_left extends React.Component {
   constructor() {
@@ -12,28 +13,36 @@ class Border_left extends React.Component {
 <div className="collapse navbar-collapse" id="navbarResponsive">
   <ul className="navbar-nav navbar-sidenav" id="exampleAccordion">
     <li className="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-      <a className="nav-link" href="index.html">
+      <Link to="/dashboard">
+      <a className="nav-link">
         <i className="fa fa-fw fa-dashboard"></i>
         <span style={{ fontFamily: 'Courier New'}} className="nav-link-text">DASHBOARD.</span>
       </a>
+      </Link>
     </li>
     <li className="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+    <Link to="/mes_scenarios">
       <a className="nav-link" href="mes_scenarios.html">
         <i className="fa fa-fw fa-area-chart"></i>
         <span style={{ fontFamily: 'Courier New'}} className="nav-link-text">Mes scénarios.</span>
       </a>
+    </Link>
     </li>
     <li className="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+    <Link to="/mes_scenarios">
       <a className="nav-link" href="mes_lectures.html">
         <i className="fa fa-fw fa-table"></i>
         <span style={{ fontFamily: 'Courier New'}} className="nav-link-text">Mes lectures.</span>
       </a>
+    </Link>
     </li>
     <li className="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+      <Link to="/catalogue">
       <a className="nav-link" href="Catalogue.html">
         <i className="fa fa-fw fa-link"></i>
         <span style={{ fontFamily: 'Courier New'}} className="nav-link-text">Catalogue.</span>
       </a>
+      </Link>
     </li>
   </ul>
   <ul className="navbar-nav sidenav-toggler">

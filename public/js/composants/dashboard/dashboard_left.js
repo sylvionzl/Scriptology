@@ -1,4 +1,5 @@
 var React = require("react");
+var Link = require('react-router-dom').Link;
 
 class Dashboard_left extends React.Component {
   constructor() {
@@ -17,10 +18,12 @@ class Dashboard_left extends React.Component {
           </a>
         </li>
         <li className="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a className="nav-link" href="mes_scenarios.html">
+        <Link to="/mes_scenarios">
+          <a className="nav-link">
             <i className="fa fa-fw fa-area-chart"></i>
             <span className="nav-link-text">Mes scénarios.</span>
           </a>
+          </Link>
         </li>
         <li className="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a className="nav-link" href="mes_lectures.html">
