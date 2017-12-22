@@ -3,6 +3,10 @@ var ReactDOM = require("react-dom");
 var Router    = require('react-router-dom').BrowserRouter
 var Route     = require('react-router-dom').Route
 
+var Provider = require('react-redux').Provider;
+var store = require("./formulaire/appReduxform");
+var BrowserRouter = require('react-router-dom').BrowserRouter;
+var AppFormRedux = require("./formulaire/appReduxform");
 
 var Home = require("./Home");
 var Dashboard = require("./dashboard/dashboard");
@@ -43,3 +47,24 @@ ReactDOM.render(
     ,
   document.getElementById("page")
 );
+
+
+/*
+ReactDOM.render(
+  <Provider store={store}>
+    <BrowserRouter>
+       <div>
+       <Route exact path="/" component={App}/>
+       <Route exact path="/notrehistoire" component={NotreHistoire}/>
+       <Route exact path="/dashboard" component={Dashboard}/>
+       <Route exact path="/mes_scenarios" component={Mes_scenarios}/>
+       <Route exact path="/catalogue" component={Catalogue}/>
+       <Route exact path="/lirescenario" component={LireScenario}/>
+       <Route exact path="/formulaire" component={AppFormRedux}/>
+       </div>
+    </BrowserRouter>
+  </Provider>
+  ,
+  document.getElementById('page')
+);
+*/

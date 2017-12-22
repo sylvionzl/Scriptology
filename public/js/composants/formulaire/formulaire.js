@@ -4,7 +4,6 @@ var Form_content = require("./form_content");
 var Form_footer = require("./form_footer");
 var Border = require("../mes_scenarios/border");
 var Footer = require("../mes_scenarios/footer");
-var Logout = require("./logout");
 
 class Formulaire extends React.Component {
   constructor() {

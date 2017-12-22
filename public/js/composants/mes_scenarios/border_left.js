@@ -29,12 +29,10 @@ class Border_left extends React.Component {
     </Link>
     </li>
     <li className="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-    <Link to="/mes_scenarios">
-      <a className="nav-link" href="mes_lectures.html">
+      <a className="nav-link" href="/meslectures">
         <i className="fa fa-fw fa-table"></i>
         <span style={{ fontFamily: 'Courier New'}} className="nav-link-text">Mes lectures.</span>
       </a>
-    </Link>
     </li>
     <li className="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
       <Link to="/catalogue">
