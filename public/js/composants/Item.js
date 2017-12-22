@@ -21,10 +21,10 @@ class Item extends React.Component {
               <Fiche />
             </div>
           </div>
-          <img className="img-fluid" src="images/rvlf.jpg" alt="" />
+          <img style={{height: '380px', width: '325px'}} className="img-fluid" src="images/rvlf.jpg" alt="" />
         </a>
         <div className="portfolio-caption">
-          <h4>Retour vers le futur</h4>
+          <h4>Retour <br/> vers le futur</h4>
           <p className="text-muted">Auteur</p>
           <p className="loglinetest">
             Un adolescent débrouillard est projeté dans le passé où il doit

@@ -1,6 +1,8 @@
 var React = require("react");
 import { Button, Modal } from "react-bootstrap";
 var Item = require("./Item");
+var Item1 = require("./Item1");
+var Item2 = require("./Item2");
 var Link = require('react-router-dom').Link;
 
 
@@ -38,10 +40,10 @@ class Portfolio extends React.Component {
             <Item/>
             </div>
             <div className="col-lg-3 portfolio-item">
-            <Item/>
+            <Item1/>
             </div>
             <div className="col-lg-3 portfolio-item">
-            <Item/>
+            <Item2/>
             </div>
 
 

@@ -20,7 +20,7 @@ class Team extends React.Component {
           <div className="row">
             <div className="col-sm-6">
               <div className="team-member">
-                <img className="mx-auto rounded-circle" src="images/team/1.jpg" alt=""/>
+                <img className="mx-auto rounded-circle" src="images/team/Sylvain.jpg" alt=""/>
                 <h4>Sylvio</h4>
                 <p className="text-muted">J'aime le grand cinéma.</p>
                 <ul className="list-inline social-buttons">
@@ -44,7 +44,7 @@ class Team extends React.Component {
             </div>
             <div className="col-sm-6">
               <div className="team-member">
-                <img className="mx-auto rounded-circle" src="images/team/2.jpg" alt=""/>
+                <img className="mx-auto rounded-circle" src="images/team/picnacer.jpg" alt=""/>
                 <h4>Nace</h4>
                 <p className="text-muted">J'aime aussi le grand cinéma. Coincidence ?</p>
                 <ul className="list-inline social-buttons">
