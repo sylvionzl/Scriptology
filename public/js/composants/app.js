@@ -10,6 +10,7 @@ var Mes_scenarios = require("./mes_scenarios/mes_scenarios");
 var LireScenario = require("./LireScenario");
 var Catalogue = require("./Catalogue");
 var NotreHistoire = require("./NotreHistoire");
+var Formulaire = require("./formulaire/formulaire");
 
 
 
@@ -35,6 +36,8 @@ ReactDOM.render(
           <Route exact path="/dashboard" component={Dashboard}/>
           <Route exact path="/mes_scenarios" component={Mes_scenarios}/>
           <Route exact path="/catalogue" component={Catalogue}/>
+          <Route exact path="/lirescenario" component={LireScenario}/>
+          <Route exact path="/formulaire" component={Formulaire}/>
       </div>
    </Router>
     ,

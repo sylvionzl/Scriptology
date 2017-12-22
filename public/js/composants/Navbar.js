@@ -1,4 +1,5 @@
 var React = require("react");
+var Link = require('react-router-dom').Link;
 
 
 class Navbar extends React.Component {
@@ -11,7 +12,9 @@ class Navbar extends React.Component {
       <div>
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top" style={{paddingTop: '0', paddingBottom: '0'}} id="mainNav">
         <div className="container">
-          <a className="navbar-brand js-scroll-trigger" href="#page-top">Scriptology</a>
+        <Link to="/">
+          <a className="navbar-brand js-scroll-trigger">Scriptology</a>
+          </Link>
           <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i className="fa fa-bars"></i>

@@ -1,10 +1,12 @@
 var React = require("react");
-var Border = require("./border");
-var Content = require("./content");
-var Footer = require("./footer");
+var Form_header = require("./form_header");
+var Form_content = require("./form_content");
+var Form_footer = require("./form_footer");
+var Border = require("../mes_scenarios/border");
+var Footer = require("../mes_scenarios/footer");
 var Logout = require("./logout");
 
-class Mes_scenarios extends React.Component {
+class Formulaire extends React.Component {
   constructor() {
     super();
   }
@@ -12,15 +14,12 @@ class Mes_scenarios extends React.Component {
   render() {
     return (
 <div>
-  <div className="fixed-nav sticky-footer bg-dark" id="page-top">
-    <Border/>
-    <Content/>
-    <Footer/>
-    <Logout/>
-  </div>
+    <Form_header/>
+    <Form_content/>
+    <Form_footer/>
 </div>
 );
 }
 }
 
-module.exports = Mes_scenarios;
+module.exports = Formulaire;
