@@ -15,11 +15,11 @@ class Services extends React.Component {
             <div className="row">
               <div className="col-lg-12 text-center">
                 <h3 className="section-subheading text-muted">
-                  Un scénario, des scenarii... Vous êtes en possession dune
-                  petite perle qui ne demande quà être produite ? Ou alors,
-                  vous cherchez du neuf, du beau, de loriginal à monter ? Ou
-                  simplement envie de progresser dans lart de raconter des
-                  histoires ? Nen jetez plus, la scriptology est faite pour
+                  Un scénario, des scenarii... Vous êtes en possession d'une
+                  petite perle qui ne demande qu'à être produite ? Ou alors,
+                  vous cherchez du neuf, du beau, de l'original à monter ? Ou
+                  simplement envie de progresser dans l'art de raconter des
+                  histoires ? N'en jetez plus, la scriptology est faite pour
                   vous.
                 </h3>
               </div>

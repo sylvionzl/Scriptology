@@ -9,7 +9,7 @@ class Sidebar extends React.Component {
   render() {
     return (
       <div>
-      <div id="catalogue" style={{position: 'static', zIndex: '3', backgroundColor: '#232526', color: 'white'}}>
+      <div id="catalogue" style={{zIndex: '3', backgroundColor: '#F8F9FA', color: '#232526'}}>
         <div className="container">
 
                   <div id="wrapper" className="toggled">
@@ -39,6 +39,21 @@ class Sidebar extends React.Component {
                               </li>
                               <li>
                                   <a href="#">Science-Fiction</a>
+                              </li>
+                              <li>
+                                  <a href="#">Thriller</a>
+                              </li>
+                              <li>
+                                  <a href="#">Westerns</a>
+                              </li>
+                              <li>
+                                  <a href="#">Séries</a>
+                              </li>
+                              <li>
+                                  <a href="#">Animation</a>
+                              </li>
+                              <li>
+                                  <a href="#">Others</a>
                               </li>
                           </ul>
                       </div>
