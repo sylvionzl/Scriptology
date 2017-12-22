@@ -1,5 +1,7 @@
 var React = require("react");
-import { Button, Modal } from "react-bootstrap";
+var Link = require('react-router-dom').Link;
+
+import { Button, Modal } from 'react-bootstrap';
 
 class Item extends React.Component {
   constructor() {
@@ -50,13 +52,13 @@ class MyLargeModal extends React.Component {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-lg">
-            Retour vers le futur
+            Retour vers le futur - Synopsis
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div>
               <p className="text-muted">
-                Synopsis <br />
+
                 Marty Mac Fly est jeune garçon de 17 ans fan de skate board et
                 de guitare rock dont il veut faire le métier. Sa vie familiale
                 reste cependant assez lugubre avec un oncle en prison, Lorraine
@@ -89,20 +91,16 @@ class MyLargeModal extends React.Component {
                 suivant ainsi les conseils que lui avait donné Marty dans une
                 lettre remise en 1955.
               </p>
-              <h2>Retour vers le futur - Scénario </h2>
-              <p className="text-muted">Auteur : Robert Zemeckis </p>
-              <p className="loglinetest">
-                Un adolescent débrouillard est projeté dans le passé où il doit
-                faire se rencontrer ses parents pour ne pas disparaître et
-                rétablir le cours du temps qu’il a changé.
-              </p>
+              <h2>Auteur : Robert Zemeckis </h2>
+
+
               <img
                 className="img-fluid"
-                style={{ height: "10px" }}
+                style={{ height: "10px", textAlign: 'center' }}
                 src="images/Etoile-de-notation-455.jpg"
                 alt=""
               />
-              <div>
+              <div style={{textAlign:'center'}}>
                 <img
                   style={{
                     height: "150px",
@@ -110,8 +108,8 @@ class MyLargeModal extends React.Component {
                   src="images/rvlf.jpg"
                   alt="lire scenario"
                 />
-              </div>
-              <Button> Lire scénario </Button>
+              </div><Link to="/lirescenario">
+              <Button className="btn btn-tertiary btn-lg btn-block"> Lire scénario </Button></Link>
           </div>
         </Modal.Body>
         <Modal.Footer>
